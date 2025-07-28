@@ -59,4 +59,16 @@
 <script setup>
 import { useAuthStore } from '~/stores/auth';
 const authStore = useAuthStore();
+
+useHead({
+  title: 'Client Dashboard',
+  meta: [
+    { name: 'description', content: 'Manage your clients with ease and efficiency.' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { charset: 'utf-8' }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+  ]
+})
 </script>
