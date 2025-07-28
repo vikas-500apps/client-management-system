@@ -43,7 +43,7 @@ A modern, responsive client management system built with Nuxt 3, Vue 3, and Tail
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/vikas-500apps/client-management-system.git)
    cd client-management-system
    \`\`\`
 
