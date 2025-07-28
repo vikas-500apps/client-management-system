@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-800 antialiased;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Modern Button Styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-out border-0 focus:ring-4 focus:ring-blue-200;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg border border-slate-200 hover:border-slate-300 transform hover:-translate-y-0.5 transition-all duration-300 ease-out focus:ring-4 focus:ring-slate-200;
+  }
+
+  .btn-danger {
+    @apply bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-out border-0 focus:ring-4 focus:ring-red-200;
+  }
+
+  .btn-success {
+    @apply bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-out border-0 focus:ring-4 focus:ring-emerald-200;
+  }
+
+  /* Modern Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 ease-out placeholder-slate-400 text-slate-700 shadow-sm hover:border-slate-300;
+  }
+
+  .input-field:focus {
+    @apply shadow-lg;
+  }
+
+  /* Modern Card Styles */
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 hover:shadow-2xl transition-all duration-500 ease-out;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-1 hover:scale-[1.02];
+  }
+
+  /* Stats Card */
+  .stats-card {
+    @apply bg-gradient-to-br from-white to-slate-50 rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-out;
+  }
+
+  /* Modern Table Styles */
+  .modern-table {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 overflow-hidden;
+  }
+
+  .table-header {
+    @apply bg-gradient-to-r from-slate-50 to-slate-100 border-b border-slate-200;
+  }
+
+  .table-row {
+    @apply hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200 ease-out border-b border-slate-100 last:border-b-0;
+  }
+
+  /* Modern Modal Styles */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50;
+  }
+
+  .modal-container {
+    @apply relative top-20 mx-auto p-0 w-11/12 md:w-3/4 lg:w-1/2 max-w-4xl;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-2xl shadow-2xl border border-white/20 overflow-hidden;
+  }
+
+  .modal-header {
+    @apply bg-gradient-to-r from-slate-50 to-slate-100 px-8 py-6 border-b border-slate-200;
+  }
+
+  .modal-body {
+    @apply p-8;
+  }
+
+  /* Navigation Styles */
+  .nav-bar {
+    @apply bg-white/90 backdrop-blur-md shadow-lg border-b border-white/20;
+  }
+
+  /* Form Styles */
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-slate-700 mb-2;
+  }
+
+  .form-error {
+    @apply text-red-500 text-sm mt-1 font-medium;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-blue {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-green {
+    @apply bg-emerald-100 text-emerald-800;
+  }
+
+  .badge-red {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-yellow {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  /* Avatar Styles */
+  .avatar {
+    @apply rounded-full ring-4 ring-white shadow-lg;
+  }
+
+  .avatar-sm {
+    @apply h-10 w-10;
+  }
+
+  .avatar-md {
+    @apply h-16 w-16;
+  }
+
+  .avatar-lg {
+    @apply h-20 w-20;
+  }
+
+  /* Pagination Styles */
+  .pagination-btn {
+    @apply relative inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:border-slate-400 rounded-lg transition-all duration-200 ease-out;
+  }
+
+  .pagination-btn-active {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-blue-600 shadow-lg;
+  }
+
+  .pagination-btn:disabled {
+    @apply opacity-50 cursor-not-allowed hover:bg-white hover:border-slate-300;
+  }
+
+  /* Search and Filter Styles */
+  .search-container {
+    @apply relative;
+  }
+
+  .search-icon {
+    @apply absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 h-5 w-5;
+  }
+
+  .search-input {
+    @apply pl-12 pr-4 py-3 w-full bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 ease-out placeholder-slate-400 text-slate-700 shadow-sm hover:border-slate-300;
+  }
+
+  /* Loading Spinner */
+  .spinner {
+    @apply animate-spin rounded-full h-6 w-6 border-2 border-slate-300 border-t-blue-600;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out;
+  }
+
+  .hover-scale {
+    @apply transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-slate-100 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-400 rounded-full hover:bg-slate-500;
+  }
+
+  /* Action Button Styles */
+  .action-btn {
+    @apply inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200 ease-out;
+  }
+
+  .action-btn-view {
+    @apply text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700;
+  }
+
+  .action-btn-edit {
+    @apply text-emerald-600 bg-emerald-50 hover:bg-emerald-100 hover:text-emerald-700;
+  }
+
+  .action-btn-delete {
+    @apply text-red-600 bg-red-50 hover:bg-red-100 hover:text-red-700;
+  }
+
+  /* Status Indicators */
+  .status-dot {
+    @apply inline-block w-2 h-2 rounded-full mr-2;
+  }
+
+  .status-active {
+    @apply bg-emerald-500;
+  }
+
+  .status-inactive {
+    @apply bg-slate-400;
+  }
+
+  .status-pending {
+    @apply bg-yellow-500;
+  }
+
+  /* Notification Styles */
+  .notification {
+    @apply fixed top-4 right-4 z-50 max-w-sm w-full bg-white rounded-xl shadow-2xl border border-slate-200 p-4;
+  }
+
+  .notification-success {
+    @apply border-l-4 border-l-emerald-500 bg-emerald-50;
+  }
+
+  .notification-error {
+    @apply border-l-4 border-l-red-500 bg-red-50;
+  }
+
+  .notification-warning {
+    @apply border-l-4 border-l-yellow-500 bg-yellow-50;
+  }
+
+  .notification-info {
+    @apply border-l-4 border-l-blue-500 bg-blue-50;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .card {
+    @apply p-4;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    @apply py-2 px-4 text-sm;
+  }
+
+  .modal-container {
+    @apply w-11/12 top-10;
+  }
+}
