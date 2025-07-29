@@ -1,4 +1,4 @@
-// import { defineNuxtConfig } from "nuxt"
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   app: {
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
     public: {
-      apiBase: "http://localhost:3001",
+      apiBase: process.env.API_BASE || "http://localhost:3001",
     },
   },
   ssr: false,
